@@ -6,12 +6,41 @@
 </head>
 <body>
 <script type="text/javascript">
-    //
+    //可以重复声明
     var price = 100;
-    //
+    //实例
+    if (price > 99) {
+        //重新赋值
+        var price = 200;
+    }
+    console.log(price);
+    //结果 price:200
+
+    //不可重复声明
     let age = 18;
-    //
-    const id = 1;
+    //实例
+    if (age >= 18) {
+        //重新赋值
+        let age = 25;
+        //age 25
+        console.log(age);
+    }
+    console.log(age); // age: 18
+    //不可赋值变量 只能更改变量对象
+    //字符串
+    const id = 'xiong';
+    //对象
+    const id = {name: 'xiong', age: '18'};
+    //实例
+    // const id = 'ye'; 结果:Uncaught SyntaxError: Identifier 'id' has already been declared
+    const id
+    .name = 'ye';
+    console.log(id[
+    ...
+    numbers
+    ])
+    ;
+
 </script>
 </body>
 </html>
